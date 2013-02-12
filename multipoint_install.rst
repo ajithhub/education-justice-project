@@ -2,6 +2,9 @@
 Windows Multipoint Installation steps
 =====================================
 
+Learn to `Install apps for RDS users`__
+
+.. _rds_user_install: http://technet.microsoft.com/en-us/magazine/ff432698.aspx
 
 
 Get the supporting files
