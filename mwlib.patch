@@ -1,0 +1,50 @@
+diff -rupN ./lib/python2.6/site-packages/mwlib/net/fetch.py /work/aantony/mwlib2.6/mwlibenv/lib/python2.6/site-packages/mwlib/net/fetch.py
+--- ./lib/python2.6/site-packages/mwlib/net/fetch.py	2013-04-19 01:40:22.000000000 -0700
++++ /work/aantony/mwlib2.6/mwlibenv/lib/python2.6/site-packages/mwlib/net/fetch.py	2013-04-19 00:47:15.028469620 -0700
+@@ -233,7 +233,7 @@ class fetcher(object):
+ 
+         self.pages = pages
+ 
+-        self.image_download_pool = gevent.pool.Pool(10)
++        self.image_download_pool = gevent.pool.Pool(1)
+ 
+         self.fatal_error = "stopped by signal"
+ 
+diff -rupN ./lib/python2.6/site-packages/mwlib/net/sapi.py /work/aantony/mwlib2.6/mwlibenv/lib/python2.6/site-packages/mwlib/net/sapi.py
+--- ./lib/python2.6/site-packages/mwlib/net/sapi.py	2013-04-19 01:40:22.000000000 -0700
++++ /work/aantony/mwlib2.6/mwlibenv/lib/python2.6/site-packages/mwlib/net/sapi.py	2013-04-19 00:55:12.470262020 -0700
+@@ -69,10 +69,19 @@ class mwapi(object):
+         return "<mwapi %s at %s>" % (self.apiurl, hex(id(self)))
+ 
+     def _fetch(self, url):
+-        f = self.opener.open(url)
+-        data = f.read()
+-        f.close()
+-        return data
++       try:
++          f = self.opener.open(url)
++       except Exception as e:
++          print "ERROR in %s" % url
++          print "Try again...."
++          try:
++            f = self.opener.open(url)
++          except Exception as e:
++             print "ERROR twice in %s" % url
++             raise(e)
++       data = f.read()
++       f.close()
++       return data
+ 
+     def _build_url(self, **kwargs):
+         args = {'format': 'json'}
+@@ -127,6 +136,10 @@ class mwapi(object):
+             todo = None
+ 
+             data = loads(self._request(**kwargs))
++            if  isinstance(data, list):
++               import pprint
++               print "AJITH WAS EHRE %s" % self._build_url(**kwargs)
++               pprint.pprint(data)
+             error = data.get("error")
+             if error:
+                 raise RuntimeError("%s: [fetching %s]" % (error.get("info", ""), self._build_url(**kwargs)))
