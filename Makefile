@@ -2,11 +2,19 @@ URL:=http://ejpdocs.cuforrent.com/
 PUBLISH_PATH:=/u/aantony/public_html/wikibooks
 PUBLISH_URL:=http://homedirs/~aantony/wikibooks
 
+
+BOOKS=ejp_server_guide.zim ejp_server_guide.pdf
+
+# Don't delete the zip intermediate file...
+.PRECIOUS: %.zip
+
+
 %.json: %.yml yaml_collection_to_json.py
 	python yaml_collection_to_json.py --collection $< --url $(URL)
 
 %.zip: %.json
 	mw-zip -c $(URL)  -o $@ -m $<
+
 %.pdf: %.zip
 	mw-render -c $< -o $@ -w rl
 	cp $@ $(PUBLISH_PATH)
@@ -19,12 +27,5 @@ PUBLISH_URL:=http://homedirs/~aantony/wikibooks
 	chmod a+r $(PUBLISH_PATH)/$@
 	@echo Published ZIM: $(PUBLISH_URL)/$@
 
-docs:
-	python yaml_collection_to_json.py test_book.yml
-	mw-zip -c http://ejpdocs.cuforrent.com/ -o test_book.zip -m test_book.json
-	mw-render -c test_book.zip -o test2.2.zim -w zim
-	cp *.{pdf,zim} /u/aantony/public_html/wikibooks/
-
-
-
+all: $(BOOKS)
 
