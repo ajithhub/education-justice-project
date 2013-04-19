@@ -1,0 +1,110 @@
+---
+title: EJP Server
+subtitle: Installation and User Guide
+type: collection
+items:
+    - title: Design Principles
+    - title: Security Considerations
+    - title: Server Hardware Details
+    - title: Windows Multipoint
+
+    - type: chapter
+      title: Administrative tools
+    - title: Autoruns
+
+    - type: chapter
+      title: Out of Box hardware Configuration
+
+    - title: Entering the BIOS Setup
+    - title: BIOS Upgrade
+    - title: BIOS Boot settings
+    - title: BIOS Enable SATA RAID
+    - title: BIOS Set time
+    - title: Configure HP Integrated Lights Out
+    - title: iLO Firmware Upgrade
+    - title: BIOS Set Password
+    - title: Choose a boot device
+
+    - type: chapter
+      title: Windows Installation
+
+    - title: Prepare Bootable EJP Recovery USB Drive
+    - title: Windows Multipoint Installation
+    - title: Windows Multipoint Installation Continues After Reboot
+    - title: HP ProLiant Support Pack
+    - title: Windows Misc Config
+    - title: Windows Activation
+    - title: Windows Multipoint Licensing
+    - title: Windows Remote Desktop Services Licensing
+    - title: Windows Performance Tuning
+    - title: Windows Update
+    - title: Windows Add Roles
+    
+    - type: chapter
+      title: Office installtion
+    - title: Microsoft Office
+    - title: Change Office Product Key
+    - title: Addins for Excel
+    - title: Text to Speech for Word
+    - title: Office Administrative Templates and Office Customization Tool
+    - title: Unregister Sharepoint workspace Explorer Extension
+
+    - type: chapter
+      title: vSpace Install
+    - title: vSpace Server Installation
+    - title: L300 Firmware Upgrade
+    - title: vSpace Registration
+    - title: Remove the NComputing app from the system tray
+    - title: VSpace Update
+
+    - type: chapter
+      title: Backups
+    - title: Backup Procedure
+    - title: Windows Server Backup Feature Install
+    - title: Unload NComputing Filter driver
+
+    - type: chapter
+      title: Printing
+    - title: Printing
+    - title: HP P1606dn Printer Setup
+    - title: HP P1606dn Driver install
+    - title: Setting Default Print Settings
+
+    - type: chapter
+      title: Multi-media
+    - title: Audio Playback
+    - title: DVD Playback
+    - title: Media Guidelines
+    - title: YouTube Videos
+
+    - type: chapter
+      title: Administrative Tasks
+
+    - title: Running Programs as Administrator
+    - title: Managing shortcuts
+    - title: Create a User
+    - title: Install Applications in Install Mode
+    - title: Switching to Internet Access
+
+    - type: chapter
+      title: Applications
+
+    - title: Firefox
+    - title: Firefox Default Preferences
+    - title: 7-zip
+    - title: Notepad++
+    - title: TreeSize Free
+    - title: Python
+    - title: Testing the Python install
+    - title: R Language
+    - title: Microsoft Security Essentials
+    - title: Sumatra PDF
+    - title: Kiwix
+    - title: Sysinternals
+    - title: Audacity
+    - title: VLC Media Player
+    - title: AntConc
+    - title: PDF Forge PDFCreator
+    - title: GIMP
+    - title: Tipp10
+

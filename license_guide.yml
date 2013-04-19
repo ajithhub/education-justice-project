@@ -1,0 +1,26 @@
+---
+title: Test Book
+subtitle: This is the subittle
+type: collection
+items:
+    - type: chapter
+      title: Public Licenses
+
+    - title: GPLv3 License
+    - title: GPLv2 License
+    - title: Mozilla Public License v2
+    - title: PSF LICENSE AGREEMENT FOR PYTHON 2.7.3
+    - title: Sumatra Simplified BSD License
+    - title: GNU LGPL License
+    - title: Creative Commons Attribution-ShareAlike 3.0 Unported License
+    - title: GNU Free Documentation License
+    - title: Fair Play License
+
+    - type: chapter
+      title: Specialized Licenses
+
+    - title: NComputing vSpace EULA
+    - title: NComputing Licensing Terms
+    - title: Enthought Python Distribution License
+    - title: Microsoft Product Use Rights
+    - title: Microsoft Security Essentials License
