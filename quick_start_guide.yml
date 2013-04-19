@@ -1,0 +1,12 @@
+---
+title: Server Evaluation Quickstart Guide
+#subtitle: This document covers some basic topics relavent to evaulating the condition of the server
+type: collection
+items:
+    - title: Quick Setup Guide
+    - title: Security Considerations
+    - title: Running Programs as Administrator
+    - title: Multipoint Manager
+    - title: Offline Wikipedia
+    - title: Khan Academy Lite
+
